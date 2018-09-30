@@ -1,0 +1,959 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+
+/*===============fonts=================*/
+
+@font-face {
+    font-family: "PFAgoraSansPro-Medium";
+    src: url(../font/pfagorasanspro-medium.ttf);
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "PFAgoraSansPro-Black";
+    src: url(../font/pfagorasanspro-black.ttf);
+    font-style: normal;
+    font-weight: normal;
+}
+
+
+/*=============main====================*/
+
+body {
+     font-family: "PFAgoraSansPro-Medium";
+}
+
+.header {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    z-index: 10;
+}
+
+.header ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+
+.header ul li {
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 18%;
+    -ms-flex: 0 0 18%;
+    flex: 0 0 18%;
+    max-width: 18%;
+}
+
+.header ul li span:nth-child(1) {
+    position: relative;
+    display: block;
+    height: 20px;
+    width: 100%;
+}
+
+.header ul li span:nth-child(2) {
+    position: relative;
+    display: block;
+    top: 5px;
+    height: 13px;
+    width: 100%;
+}
+
+.header ul li span:nth-child(3) {
+    position: relative;
+    display: block;
+    height: 3px;
+    width: 100%;
+    top: 9px;
+}
+
+.header ul li.yellow span {
+    background: #fee800;
+}
+
+.header ul li.blue span {
+    background: #88cad0;
+}
+
+.header ul li.green span {
+    background: #6a983e;
+}
+
+.header ul li.red span {
+    background: #da233d;
+}
+
+.header ul li.orange span {
+    background: #eb8928;
+}
+
+.contact {
+    position: relative;
+    text-align: right;
+    width: 100%;
+    top: 65px;
+}
+
+.num {
+    color: #e0003c;
+    font-size: 25px;
+    margin-right: 45px;
+}
+
+.num>span {
+    font-size: 50px;
+}
+
+.contact>a {
+    text-decoration: none;
+    color: #ee9c18;
+    font-size: 30px;
+    margin-left: 115px;
+    font-family: "PFAgoraSansPro-Medium";
+}
+
+.main-info {
+    background: url(../img/main-background.png) no-repeat;
+    background-position: 0% 120%;
+    -webkit-background-size: cover;
+    background-size: cover;
+    position: relative;
+    min-height: 100vh;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+
+.clock {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.day,
+.hour,
+.min,
+.sec {
+    width: 110px;
+    height: 110px;
+    background: yellow;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    margin: 11px;
+}
+
+.content {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-justify-content: space-around;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+    -webkit-box-align: start;
+    -webkit-align-items: flex-start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    margin-top: 111px;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+
+.info-time {
+    text-transform: uppercase;
+    font-size: 40px;
+    color: #e0003c;
+    text-align: center;
+    margin-bottom: 16px;
+}
+
+.day span,
+.hour span,
+.min span,
+.sec span {
+    font-size: 40px;
+    font-weight: 800;
+    font-family: "PFAgoraSansPro-Black";
+    color: #614732;
+}
+
+.day p,
+.hour p,
+.min p,
+.sec p {
+    font-size: 30px;
+    color: #614732;
+    margin: 0 auto;
+}
+
+.hous-info {
+    width: 340px;
+    font-size: 29px;
+    text-align: center;
+    margin: 10px auto 0px auto;
+    font-family: "PFAgoraSansPro-Black";
+    line-height: 1.5;
+    color: #e0003c;
+    text-transform: uppercase;
+}
+
+.hous-info span {
+    font-size: 40px;
+}
+
+.num-time {
+    margin: 0 auto;
+    padding-top: 20px;
+}
+
+.logo {
+    text-align: center;
+    position: relative;
+    top: -40px;
+}
+
+.logo>img {
+    max-width: 390px;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.logo>p {
+    max-width: 640px;
+    font-size: 25px;
+    line-height: 1.3;
+    text-align: center;
+    color: #614732;
+}
+
+.advantages {
+    position: relative;
+    top: -10px;
+    /* right: 50px; */
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    /* width: 80%; */
+    -webkit-box-pack: end;
+    -webkit-justify-content: flex-end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+    text-align: center;
+}
+
+.advantages p {
+    text-align: center;
+    font-family: "PFAgoraSansPro-Black";
+    font-weight: 600;
+    font-size: 16px;
+    color: #614732;
+}
+
+.advantages span.block {
+    display: block;
+    font-family: "PFAgoraSansPro-Black";
+    font-weight: 700;
+    font-size: 25px;
+}
+
+.advantages p span.queue {
+    display: inline;
+    margin-right: 5px;
+    font-family: "PFAgoraSansPro-Black";
+    font-weight: 700;
+    font-size: 25px;
+}
+
+.advantages .advantages-block {
+    padding: 0 10px;
+    max-width: 200px;
+}
+
+.advantages span.inline {
+    display: inline;
+    font-size: 16px;
+    text-align: center;
+    font-family: "PFAgoraSansPro-Black";
+    font-weight: 600;
+    color: #614732;
+}
+
+.advantages .img-fluid {
+    max-width: 45px;
+    margin-bottom: 5px;
+}
+
+.footer {
+    margin-top: auto;
+}
+
+.footer .row {
+    background: #8f7662;
+    -webkit-justify-content: space-around;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    min-height: 89px;
+}
+
+.footer h5 {
+    color: #fff;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.footer .footer-block {
+    position: relative;
+}
+
+.footer-block:last-child:before {
+    content: none;
+}
+
+.footer-block:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: -15px;
+    min-height: 55px;
+    width: .15rem;
+    background: #fff;
+}
+
+.footer .footer-block:nth-child(3) img,
+.footer .footer-block:nth-child(4) img,
+.footer .footer-block:nth-child(6) img,
+.footer .footer-block:nth-child(7) img {
+    max-width: 70px;
+    margin-top: 0;
+}
+
+.footer .footer-block:nth-child(5) h5,
+.footer .footer-block:nth-child(1) h5,
+.footer .footer-block:nth-child(2) h5 {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.footer img {
+    max-width: 110px;
+    margin-top: 15px;
+}
+
+.footer .media {
+    min-height: 65px;
+}
+@media screen and (max-width: 1367px){
+    .logo>img{
+        max-width: 290px;
+    }
+    .logo>p{
+        font-size: 20px;
+    }
+    .info-time{
+       margin: 0 auto 5px auto; 
+    }
+    .hous-info{
+        margin: 0 auto;
+        position: relative;
+        top: -10px;
+        margin-bottom: -10px;
+    }
+    .advantages .img-fluid{
+        max-width: 40px;
+    }
+    .num>span{
+        font-size: 35px;
+    }
+    .contact>a{
+        font-size: 25px;
+    }
+    .day, .hour, .min, .sec{
+        width: 70px;
+        height: 70px;
+    }
+    .day span, .hour span, .min span, .sec span{
+        font-size: 30px;
+    }
+    .day p, .hour p, .min p, .sec p{
+        font-size: 22px;
+    }
+    .num-time{
+        padding-top: 9px;
+    }
+    .clock{
+        -webkit-box-pack: center;
+        -webkit-justify-content: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+    }
+}
+@media screen and (max-width: 1230px) {
+    .footer-block:before {
+        content: none;
+    }
+    .content .countdown {
+        -webkit-box-flex: 0;
+        -webkit-flex: 0 0 48%;
+        -ms-flex: 0 0 48%;
+        flex: 0 0 48%;
+        max-width: 48%;
+    }
+    .content .logo {
+        -webkit-box-flex: 0;
+        -webkit-flex: 0 0 48%;
+        -ms-flex: 0 0 48%;
+        flex: 0 0 48%;
+        max-width: 48%;
+    }
+    .advantages .advantages-block {
+        margin-top: 5px;
+    }
+    /*.content {
+        margin-top: auto;
+    }*/
+}
+
+@media screen and (max-width: 991px) {
+    .content {
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+    .content .logo {
+        -webkit-flex: 0 0 100%;
+        -ms-flex: 0 0 100%;
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    .content .countdown {
+        -webkit-flex: 0 0 100%;
+        -ms-flex: 0 0 100%;
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    .hous-info {
+        margin-bottom: 25px;
+    }
+    .footer .footer-block:nth-child(5) h5,
+    .footer .footer-block:nth-child(1) h5,
+    .footer .footer-block:nth-child(2) h5 {
+        position: relative;
+    }
+    .footer .media {
+        padding: 10px;
+    }
+    .logo>img {
+        max-width: 300px;
+    }
+    .logo>p {
+        max-width: 100%;
+        font-size: 21px;
+    }
+    .day,
+    .hour,
+    .min,
+    .sec {
+        height: 70px;
+        width: 70px;
+    }
+    .day span,
+    .hour span,
+    .min span,
+    .sec span {
+        font-size: 30px;
+    }
+    .day p,
+    .hour p,
+    .min p,
+    .sec p {
+        font-size: 20px;
+    }
+    .num-time {
+        padding-top: 8px;
+    }
+    .info-time {
+        font-size: 28px;
+    }
+    .clock {
+        -webkit-box-pack: center;
+        -webkit-justify-content: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+    }
+    .hous-info {
+        width: 100%;
+        font-size: 20px;
+        margin-top: 0;
+    }
+    .advantages {
+        -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        -webkit-box-pack: center;
+        -webkit-justify-content: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+    }
+    .advantages .advantages-block {
+        margin-top: 12px;
+    }
+}
+
+@media screen and (max-width: 771px) {
+    
+    .footer img {
+        max-width: 120px;
+    }
+    .footer .footer-block:nth-child(3) img,
+    .footer .footer-block:nth-child(4) img,
+    .footer .footer-block:nth-child(6) img,
+    .footer .footer-block:nth-child(7) img {
+        max-width: 74px;
+    }
+    .footer h5 {
+        font-size: 17px;
+    }
+    .advantages .img-fluid {
+        max-width: 35px;
+    }
+    .advantages .advantages-block {
+        max-width: 33%;
+        flex: 0 0 33%;
+    }
+    .logo>img {
+        max-width: 427px;
+    }
+    .logo>p {
+        font-size: 27px;
+    }
+    .num {
+        font-size: 20px;
+    }
+    .num>span {
+        font-size: 28px;
+    }
+    .contact>a {
+        font-size: 18px;
+    }
+     .content {
+        margin-top: 120px;
+    }
+    .info-time {
+        font-size: 22px;
+    }
+    .hous-info {
+        font-size: 18px;
+    }
+    .hous-info span {
+        font-size: 28px;
+    }
+    .day,
+    .hour,
+    .min,
+    .sec {
+        height: 50px;
+        width: 50px;
+    }
+    .day span,
+    .hour span,
+    .min span,
+    .sec span {
+        font-size: 22px;
+    }
+    .day p,
+    .hour p,
+    .min p,
+    .sec p {
+        font-size: 14px;
+    }
+    .advantages span.block {
+        font-size: 18px;
+    }
+    .advantages p {
+        font-size: 14px;
+    }
+    .advantages span.inline {
+        font-size: 14px;
+    }
+    .advantages p span.queue {
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width: 475px) {
+    .footer .footer-block {
+        flex: 0 0 48%;
+        max-width: 48%;
+        margin: 10px auto;
+    }
+    .main-info {
+        background: url(../img/main-background.png) no-repeat;
+        background-position: 40% 0;
+        -webkit-background-size: cover;
+        background-size: cover;
+    }
+    .content {
+        margin-top: 89px;
+        margin-bottom: -29px;
+    }
+    .header ul li span:nth-child(1) {
+        height: 7px;
+    }
+    .header ul li span:nth-child(2) {
+        height: 3px;
+        top: 3px;
+    }
+    .header ul li span:nth-child(3) {
+        height: 1px;
+        top: 5px;
+    }
+    .contact {
+        text-align: center;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: justify;
+        -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+        top: 32px;
+    }
+    .contact>a {
+        margin: 0;
+    }
+    .logo>img {
+        max-width: 280px;
+    }
+    .logo>p {
+        font-size: 20px;
+    }
+    .day,
+    .hour,
+    .min,
+    .sec {
+        margin: 10px 5px;
+    }
+    .info-time {
+        font-size: 18px;
+        /*margin-bottom: 75px;*/
+    }
+    .hous-info {
+        font-size: 15px;
+    }
+    .advantages span.block,
+    .advantages p span.queue {
+        font-size: 14px;
+    }
+    .advantages p,
+    .advantages span.inline {
+        font-size: 12px;
+    }
+    .media {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -webkit-box-pack: center;
+        -webkit-justify-content: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+        -ms-flex-align: center;
+        align-items: center;
+    }
+    .mt-0 {
+        margin-top: 5px!important;
+    }
+    .footer img {
+        margin: 0;
+    }
+    .mr-3 {
+        margin-right: 0!important
+    }
+    .footer .media {
+        padding: 0 5px 5px 5px;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 410px) {
+   
+    .advantages {
+        top: 20px;
+        margin-bottom: 25px;
+    }
+    .mr-3 {
+        margin-right: 0!important;
+    }
+    .footer {
+        margin-bottom: 1px;
+    }
+    .footer img {
+        margin: 0;
+    }
+    .num {
+        font-size: 13px;
+    }
+    .num>span {
+        font-size: 14px;
+    }
+    .footer .media {
+        padding: 5px 10px 0 10px;
+    }
+    .media {
+        -webkit-bofx-orient: vertical;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -webkit-box-pack: center;
+        -webkit-justify-content: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+        -ms-flex-align: center;
+        align-items: center;
+    }
+    .mt-0 {
+        margin-top: 5px!important;
+    }
+    .advantages span.block,
+    .advantages p span.queue {
+        font-size: 14px;
+    }
+    .advantages p,
+    .advantages span.inline {
+        font-size: 13px;
+    }
+    .content {
+        margin-bottom: -30px;
+        margin-top: 103px;
+    }
+    .logo>img {
+        max-width: 257px;
+        margin-bottom: 5px;
+    }
+    .advantages .img-fluid {
+        max-width: 40px;
+    }
+    .logo>p {
+        font-size: 18px;
+    }
+    .info-time {
+        font-size: 18px;
+        margin-bottom: 0;
+    }
+    .hous-info {
+        font-size: 13px;
+        position: relative;
+        top: -8px;
+    }
+    .hous-info span {
+        font-size: 16px;
+    }
+    .footer h5 {
+        font-size: 16px;
+    }
+    .day,
+    .hour,
+    .min,
+    .sec {
+        margin: 10px 3px;
+        height: 45px;
+        width: 50px;
+    }
+    .day span,
+    .hour span,
+    .min span,
+    .sec span {
+        font-size: 16px;
+    }
+    .day p,
+    .hour p,
+    .min p,
+    .sec p {
+        font-size: 10px;
+    }
+}
+@media screen and (max-height: 588px){
+    .advantages{
+        top: 0;
+
+    }
+    .advantages .advantages-block{
+        padding: 0 5px;
+        margin: 0;
+    }
+    .footer .media{
+            padding: 5px 5px 0 5px;
+    }
+    .content{
+        margin-top: 80px;
+    }
+    
+}
